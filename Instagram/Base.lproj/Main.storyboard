@@ -82,6 +82,61 @@
                     <view key="view" contentMode="scaleToFill" id="j7h-gg-SSe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8zE-mF-Zaa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="401" id="vV5-hF-Kao" customClass="PostCell" customModule="Instagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="401"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vV5-hF-Kao" id="A0q-Lq-9sN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="401"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PAS-1n-o3R">
+                                                    <rect key="frame" x="8" y="8" width="359" height="356"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="PAS-1n-o3R" secondAttribute="height" multiplier="359:356" id="vtp-D5-mU5"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="So cute!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNc-rj-9X2">
+                                                    <rect key="frame" x="64" y="372" width="303" height="20.333333333333314"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radia:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOC-0f-Ymp">
+                                                    <rect key="frame" x="8" y="372" width="48" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="bNc-rj-9X2" secondAttribute="trailing" constant="8" id="7tW-PU-f1a"/>
+                                                <constraint firstAttribute="trailing" secondItem="PAS-1n-o3R" secondAttribute="trailing" constant="8" id="A7c-Yb-kaY"/>
+                                                <constraint firstItem="bNc-rj-9X2" firstAttribute="top" secondItem="PAS-1n-o3R" secondAttribute="bottom" constant="8" id="Fcc-4H-jl9"/>
+                                                <constraint firstItem="QOC-0f-Ymp" firstAttribute="leading" secondItem="A0q-Lq-9sN" secondAttribute="leading" constant="8" id="PzY-4a-uJB"/>
+                                                <constraint firstItem="bNc-rj-9X2" firstAttribute="top" secondItem="PAS-1n-o3R" secondAttribute="bottom" constant="8" id="QYS-GK-iGQ"/>
+                                                <constraint firstItem="PAS-1n-o3R" firstAttribute="leading" secondItem="A0q-Lq-9sN" secondAttribute="leading" constant="8" id="fVF-2O-nLB"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bNc-rj-9X2" secondAttribute="bottom" constant="8" id="i82-0B-afN"/>
+                                                <constraint firstItem="bNc-rj-9X2" firstAttribute="leading" secondItem="QOC-0f-Ymp" secondAttribute="trailing" constant="8" id="mOs-HB-i2K"/>
+                                                <constraint firstItem="PAS-1n-o3R" firstAttribute="top" secondItem="A0q-Lq-9sN" secondAttribute="top" constant="8" id="owy-x1-Af1"/>
+                                                <constraint firstItem="QOC-0f-Ymp" firstAttribute="top" secondItem="PAS-1n-o3R" secondAttribute="bottom" constant="8" id="qYy-Pb-lss"/>
+                                                <constraint firstItem="QOC-0f-Ymp" firstAttribute="leading" secondItem="A0q-Lq-9sN" secondAttribute="leading" constant="8" id="ty6-E2-iio"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="bNc-rj-9X2" id="UV0-qE-02D"/>
+                                            <outlet property="photoView" destination="PAS-1n-o3R" id="xO2-ns-K4t"/>
+                                            <outlet property="usernameLabel" destination="QOC-0f-Ymp" id="0Ot-gu-8dz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="IIQ-lq-uiA"/>
                     </view>
@@ -92,6 +147,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="8zE-mF-Zaa" id="Bj6-Yz-Z57"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k11-Ei-qwX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
