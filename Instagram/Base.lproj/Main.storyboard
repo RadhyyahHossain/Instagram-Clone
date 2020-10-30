@@ -163,6 +163,10 @@
                                                 <constraint firstItem="hL3-zR-CL6" firstAttribute="top" secondItem="gMt-cu-uv8" secondAttribute="top" constant="8" id="w4e-8U-sZi"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="aBI-gR-AAv" id="11m-Wz-zDT"/>
+                                            <outlet property="nameLabel" destination="hL3-zR-CL6" id="8gU-SS-T32"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
