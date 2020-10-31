@@ -16,7 +16,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
+        let parseConfig = ParseClientConfiguration {
+                $0.applicationId = "kyJdlD5HzlvCYguWBq0cbx7NY6tn8TT8WHxMTmCT" // <- UPDATE
+                $0.clientKey = "GHBhDSbdpgovBQHg5P1B7Q1DAcC7LcgdwfAZyMFa" // <- UPDATE
+                $0.server = "https://parseapi.back4app.com"
+        }
+        Parse.initialize(with: parseConfig)
         
         if PFUser.current() != nil {
             let main = UIStoryboard(name: "Main", bundle: nil)
